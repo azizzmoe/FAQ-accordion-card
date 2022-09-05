@@ -1,7 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
 body {
   background: #eee;
   padding-top: 20px;
-  font-family: monospace;
+  font-size: 12px;
+  font-family: "Kumbh Sans", sans-serif;
 }
 
 .header {
@@ -22,6 +24,8 @@ body {
 .faq-body {
   display: none;
   margin-top: 30px;
+  font-size: 1.5rem;
+  color: #787887;
 }
 
 .faq-wrapper {
@@ -31,10 +35,11 @@ body {
 
 .faq-inner {
   padding: 30px;
-  background: aliceblue;
+  background: rgb(255, 255, 255);
 }
 
 .faq-plus {
+  width: 1.5rem;
   float: right;
   font-size: 1.4em;
   line-height: 1em;
