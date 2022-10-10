@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
 
-
-
 $Very-dark-desaturated-blue: #1d1e35;
 $Soft-red: #f47c57;
 $Soft-violet: #af67e9;
@@ -10,49 +8,19 @@ $Very-dark-grayish-blue: #4a4b5e;
 $Dark-grayish-blue: #787887;
 $Light-grayish-blue: #e7e7e9;
 
-
-
-
 body {
-  background: #eee;
   padding-top: 20px;
   font-size: 12px;
   font-family: "Kumbh Sans", sans-serif;
+  background: $Soft-violet;
 }
-.header {
-  border-radius: 20px 20px 0px 0px;
-  padding: 10px 0px;
-  color: rgb(5, 5, 5);
-  width: 100%;
+
+main {
+  margin: 2rem;
+  
   display: flex;
-  align-content: left;
+  flex-direction: column;
   justify-content: center;
-}
-.faq-item {
-  margin-bottom: 40px;
-  margin-top: 40px;
-}
-.faq-body {
-  display: none;
-  margin-top: 30px;
-  font-size: 1.5rem;
-  color: $Dark-grayish-blue;
-}
-.faq-wrapper {
-  width: 75%;
-  margin: 0 auto;
-}
-.faq-inner {
-  padding: 30px;
-  background: rgb(255, 255, 255);
-}
-.faq-plus {
-  width: 1.5rem;
-  float: right;
-  font-size: 1.4em;
-  line-height: 1em;
-  cursor: pointer;
-}
-hr {
-  background-color: #9b9b9b;
+  align-items: center;
+  height: 100vh;
 }
