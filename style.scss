@@ -8,8 +8,18 @@ $Very-dark-grayish-blue: #4a4b5e;
 $Dark-grayish-blue: #787887;
 $Light-grayish-blue: #e7e7e9;
 
+@mixin flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @content;
+}
+
 body {
-  min-width: 460px;
+  // min-width: 460px;
+  @include flex();
+  height: 150vh;
   font-size: 12px;
   font-family: "Kumbh Sans", sans-serif;
   background: $Soft-violet;
@@ -17,40 +27,33 @@ body {
 
 main {
   margin: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include flex();
   height: 100vh;
 }
 
 .container {
-  padding-top: 5rem;
+  padding: 9rem 0 5rem 0;
   background: white;
   border-radius: 2rem;
 
   .illus {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flex();
+
     .img {
       position: absolute;
-      height: 100px;
-      width: 100px;
+      height: 11rem;
     }
     .woman {
-      top: 9rem;
+      width: 100%;
+      top: 7rem;
       background: center url("../images/illustration-woman-online-mobile.svg")
         no-repeat;
-      width: 70%;
-      height: 15%;
     }
     .w-shadow {
       background: center url("../images/bg-pattern-mobile.svg") no-repeat;
       width: 100%;
-      height: 15%;
-      top: 13rem;
+      height: 16%;
+      top: 14rem;
     }
   }
   .accordion {
