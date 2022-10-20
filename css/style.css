@@ -7,7 +7,8 @@ body {
   height: 150vh;
   font-size: 12px;
   font-family: "Kumbh Sans", sans-serif;
-  background: #af67e9;
+  background: rgb(175, 103, 233);
+  background: linear-gradient(180deg, rgb(175, 103, 233) 0%, rgb(101, 101, 231) 100%);
 }
 
 main {
@@ -88,4 +89,42 @@ main {
   z-index: 3;
   outline: 0;
   box-shadow: none;
+}
+
+.accordion-button:hover {
+  color: tomato;
+}
+
+.accordion-button:focus {
+  color: black;
+  font-weight: bold;
+}
+
+@media (min-width: 1240px) {
+  main {
+    width: 100%;
+  }
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 9rem 5rem 9rem 0;
+  }
+  .illus {
+    height: 150%;
+    width: 50%;
+    background: -130% url("../images/illustration-woman-online-desktop.svg") no-repeat;
+  }
+  .illus .img {
+    display: none;
+  }
+  .accordion {
+    width: 50%;
+    gap: 1rem;
+  }
+  .accordion h1 {
+    text-align: left;
+    padding-left: 1rem;
+  }
 }/*# sourceMappingURL=style.css.map */
