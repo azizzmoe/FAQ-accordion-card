@@ -17,133 +17,125 @@ $Light-grayish-blue: #e7e7e9;
 }
 
 body {
-  // min-width: 460px;
-  @include flex();
-  height: 150vh;
   font-size: 12px;
   font-family: "Kumbh Sans", sans-serif;
   background: rgb(175, 103, 233);
-  background: linear-gradient(
-    180deg,
-    rgba(175, 103, 233, 1) 0%,
-    rgba(101, 101, 231, 1) 100%
-  );
 }
 
-main {
-  margin: 2rem;
+.container {
+  min-width: 420px;
+  background: transparent;
   @include flex();
   height: 100vh;
 }
 
-.container {
-  padding: 9rem 0 5rem 0;
+.images {
   background: white;
-  border-radius: 2rem;
-  .illus {
-    @include flex();
+  border-radius: 1rem 1rem 0 0;
 
-    .img {
-      position: absolute;
-      height: 11rem;
-    }
-    .woman {
-      width: 100%;
-      top: 7rem;
-      background: center url("../images/illustration-woman-online-mobile.svg")
-        no-repeat;
-    }
-    .w-shadow {
-      background: center url("../images/bg-pattern-mobile.svg") no-repeat;
-      width: 100%;
-      height: 16%;
-      top: 14rem;
-    }
-  }
-  .accordion {
+  .row {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    height: 50vh;
+    position: relative;
+    bottom: 4rem;
 
-    h1 {
-      text-align: center;
-      font-weight: bolder;
+    img {
+      width: 60%;
     }
   }
 }
 
-.accordion-item {
-  box-shadow: none;
-  outline: none;
-  border: none;
+.bg {
+  background-color: white;
+}
 
-  button::after {
-    display: flex;
-    padding-right: 2rem;
+h2 {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 2rem;
+}
+
+.acc {
+  padding-bottom: 1rem;
+  border-radius: 0 0 1rem 1rem;
+
+  .accordion-item {
+    box-shadow: none;
+    outline: none;
+    border: none;
+
+    button::after {
+      display: flex;
+      padding-right: 2rem;
+      background: center url("../images/icon-arrow-down.svg") no-repeat;
+      background-size: 1rem;
+    }
+  }
+
+  .accordion-button::after {
     background: center url("../images/icon-arrow-down.svg") no-repeat;
     background-size: 1rem;
   }
-}
 
-.accordion-button::after {
-  background: center url("../images/icon-arrow-down.svg") no-repeat;
-  background-size: 1rem;
-}
-
-.accordion-button:not(.collapsed)::after {
-  background: center url("../images/icon-arrow-down.svg") no-repeat;
-  background-size: 1rem;
-}
-
-.accordion-button:not(.collapsed) {
-  color: #000;
-  background-color: #fff;
-  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125);
-}
-
-.accordion-button:focus {
-  z-index: 3;
-  outline: 0;
-  box-shadow: none;
-}
-
-.accordion-button:hover {
-  color: tomato;
-}
-
-.accordion-button:focus {
-  color: black;
-  font-weight: bold;
-}
-
-@media (min-width: 1240px) {
-  main {
-    width: 100%;
+  .accordion-button:not(.collapsed)::after {
+    background: center url("../images/icon-arrow-down.svg") no-repeat;
+    background-size: 1rem;
   }
-  .container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 9rem 5rem 9rem 0;
+
+  .accordion-button:not(.collapsed) {
+    color: #000;
+    background-color: #fff;
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125);
   }
-  .illus {
-    height: 150%;
-    width: 50%;
-    background: -130% url("../images/illustration-woman-online-desktop.svg")
-      no-repeat;
-    // background-size: contain;
-    .img {
-      display: none;
+
+  .accordion-button:focus {
+    z-index: 3;
+    outline: 0;
+    box-shadow: none;
+  }
+
+  .accordion-button:hover {
+    color: tomato;
+  }
+
+  .accordion-button:focus {
+    color: black;
+    font-weight: bold;
+  }
+}
+
+@media (min-width: 1000px) {
+  .images {
+    background: white;
+    border-radius: 0;
+
+    .row {
+      display: grid;
+      place-items: center;
+      height: 100px;
+      position: relative;
+      right: 4rem;
+
+      img {
+        width: 100%;
+      }
     }
   }
-  .accordion {
-    width: 50%;
-    gap: 1rem;
-    h1 {
-      text-align: left;
-      padding-left: 1rem;
-    }
+
+  .acc {
+    border: none;
+    padding-bottom: 1rem;
+    border-radius: 0 1rem 1rem 0;
+  }
+  h2 {
+    text-align: left;
+  }
+
+  .ill,
+  .acc {
+    padding: 2rem;
+  }
+  .ill {
+    border-radius: 1rem 0 0 1rem;
   }
 }
